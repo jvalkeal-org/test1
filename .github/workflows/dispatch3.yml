@@ -1,0 +1,13 @@
+name: Dispatch3
+on:
+  workflow_dispatch:
+permissions: read-all
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: benc-uk/workflow-dispatch@v1
+      with:
+        workflow: Hello World
+        token: ${{ secrets.GITHUB_TOKEN }}
+        ref: main
